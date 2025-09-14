@@ -26,18 +26,18 @@ logging.info("This is an info message")
 logging.warning("This is a warning")
 logging.error("This is an error")
 
-⚡ Best Practices
+### ⚡ Best Practices
 
-Use module-level loggers
+## Use module-level loggers
 
 import logging
 logger = logging.getLogger(__name__)
 
 
-Avoid print() for debugging
-Use appropriate logging levels instead.
+# Avoid print() for debugging
+# Use appropriate logging levels instead.
 
-Use basicConfig or dictConfig for project-wide setup
+## Use basicConfig or dictConfig for project-wide setup
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -49,7 +49,7 @@ logging.basicConfig(
 )
 
 
-Log Exceptions with exc_info=True
+## Log Exceptions with exc_info=True
 
 try:
     1 / 0
@@ -57,7 +57,7 @@ except ZeroDivisionError:
     logger.exception("Division by zero error")
 
 
-Use different log levels properly
+## Use different log levels properly
 
 DEBUG → Detailed diagnostic info
 
@@ -69,7 +69,7 @@ ERROR → A failure in part of the system
 
 CRITICAL → Application crash or serious issue
 
-📂 Project Logging Example
+### 📂 Project Logging Example
 project/
 │── app.py
 │── user_service.py
@@ -85,9 +85,9 @@ def create_user(username):
     logger.info("Creating user: %s", username)
     return {"user": username}
 
-🔧 Advanced Topics
+### 🔧 Advanced Topics
 
-Logging to multiple files.
+## Logging to multiple files.
 
 Rotating log files (RotatingFileHandler, TimedRotatingFileHandler).
 
